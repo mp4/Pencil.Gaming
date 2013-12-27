@@ -516,5 +516,19 @@ namespace Pencil.Gaming.MathUtils {
 			//be converted to ie a one or a zero in the last position 
 			return new Quaternion(vector, 0.0f);
 		}
+		/// <summary>
+		/// Dot product of the specified left and right quaternions is equal to cos(theta) where theta
+		/// is the difference between the two quaternions
+		/// </summary>
+		/// <param name='left'>
+		/// Left.
+		/// </param>
+		/// <param name='right'>
+		/// Right.
+		/// </param>
+		public static float Dot(Quaternion left, Quaternion right)
+		{
+			return left.X * right.X + left.Y*right.Y+ left.Z*right.Z+ left.W*right.W;
+		}
 	}
 }
