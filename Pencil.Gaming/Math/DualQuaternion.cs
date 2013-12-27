@@ -79,6 +79,26 @@ namespace Pencil.Gaming {
 		public override string ToString() {
 			return string.Format("[DualQuaternion: dual={0}, real={1}]", dual, real);
 		}
+		/// <summary>
+		/// Sets the xyzw or real part of the quaternion
+		/// </summary>
+		/// <value>
+		/// The xyzw.
+		/// </value>
+		public Vector4 Xyzw
+		{
+			get{return new Vector4(real.Xyz, real.W);}
+		}
+		/// <summary>
+		/// Sets the dfgh or dual part of the quaternion
+		/// </summary>
+		/// <value>
+		/// The dfgh.
+		/// </value>
+		public Vector4 Dfgh
+		{
+			get{return new Vector4(dual.Xyz, dual.W);}
+		}
 	}
 }
 
